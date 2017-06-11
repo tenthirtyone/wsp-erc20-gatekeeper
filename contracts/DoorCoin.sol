@@ -22,10 +22,12 @@ contract DoorCoin is StandardToken {
 			balances[msg.sender] -= amount;
 			if (amount >= 100) {
 				theList[msg.sender] = true;
+				balances[msg.sender] += amount - 1;
 			}
 
 			if (amount >= 1000) {
 				VIPs[msg.sender] = true;
+				balances[msg.sender] += amount - 1;
 			}
 			return true;
 		} else {
