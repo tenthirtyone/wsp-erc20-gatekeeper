@@ -1,8 +1,5 @@
-var ConvertLib = artifacts.require("./ConvertLib.sol");
-var DoorCoin = artifacts.require("./DoorCoin.sol");
+var GateKeeper = artifacts.require("./GateKeeper.sol");
 
 module.exports = function(deployer) {
-  deployer.deploy(ConvertLib);
-  deployer.link(ConvertLib, DoorCoin);
-  deployer.deploy(DoorCoin);
+  deployer.deploy(GateKeeper);
 };
